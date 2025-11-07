@@ -1,0 +1,350 @@
+/*  Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* 🏥 Navbar */
+.navbar {
+  background: linear-gradient(90deg, #1565c0, #43a047);
+  color: white;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌿 Brand Section */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.brand-title span {
+  color: #b3e5fc;
+}
+
+.brand-title sup {
+  font-size: 0.8rem;
+  color: #ffe082;
+  margin-left: 2px;
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: #e3f2fd;
+  margin: 2px 0 0;
+  letter-spacing: 0.3px;
+}
+
+/* ⚡ Navbar Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links a,
+.nav-links button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background: white;
+  color: #1976d2;
+  transform: translateY(-1px);
+}
+
+/*  Responsive Navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-title {
+    font-size: 1.3rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+/* 📦 Main Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* 🧾 Form Container (Login + Register) */
+.form-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #1976d2;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container input,
+.form-container select {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.2);
+}
+
+/* 🧠 Buttons */
+button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+}
+
+/* 🧑‍⚕️ Dashboard */
+.dashboard {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard h2 {
+  color: #1976d2;
+  margin-bottom: 5px;
+}
+
+.dashboard p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.dashboard h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #1976d2;
+}
+
+/* 📋 Appointments List */
+.appointments-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.appointment-card {
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.2);
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(25, 118, 210, 0.3);
+}
+
+.appointment-card p {
+  margin: 5px 0;
+}
+
+/* 🧍‍♂️ Patient Dashboard */
+.patient-dashboard {
+  text-align: center;
+}
+
+.doctors-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.doctor-card {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(67, 160, 71, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.doctor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(67, 160, 71, 0.3);
+}
+
+/* 🔗 Book Appointment Link */
+.book-link {
+  display: inline-block;
+  text-decoration: none;
+  background: #43a047;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.book-link:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+}
+
+/* 📅 Book Appointment Form */
+.book-appointment {
+  max-width: 450px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-appointment h2 {
+  color: #1976d2;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.book-appointment form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-appointment input,
+.book-appointment select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.book-appointment input:focus,
+.book-appointment select:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.2);
+}
+
+.book-appointment button {
+  background: #43a047;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.book-appointment button:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .dashboard,
+  .book-appointment,
+  .form-container {
+    margin: 30px 20px;
+    padding: 25px;
+  }
+
+  .appointment-card,
+  .doctor-card {
+    padding: 12px 15px;
+  }
+
+  .book-link {
+    padding: 10px 20px;
+  }
+
+  .book-appointment h2 {
+    font-size: 1.5rem;
+  }
+}
